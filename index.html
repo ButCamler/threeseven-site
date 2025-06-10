@@ -6,18 +6,19 @@
   <title>ThreeSeven - Grow Your Business Online</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+
   <style>
+    /* Animated cascading blue gradient background */
     .animated-bg {
       position: fixed;
       top: 0;
       left: 0;
-      width: 100%;
-      height: 100%;
+      width: 100vw;
+      height: 100vh;
       background: linear-gradient(-45deg, #3b82f6, #2563eb, #1e40af, #3b82f6);
       background-size: 400% 400%;
       animation: gradientShift 30s ease infinite;
       z-index: -1;
-      filter: brightness(0.9);
     }
 
     @keyframes gradientShift {
@@ -32,10 +33,16 @@
       }
     }
 
+    body {
+      background: transparent !important;
+      position: relative;
+      margin: 0;
+      min-height: 100vh;
+    }
+
     .animate-fade-in {
       animation: fadeIn 1s ease-out forwards;
     }
-
     @keyframes fadeIn {
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
@@ -44,6 +51,7 @@
 </head>
 <body class="text-gray-800">
 
+  <!-- Animated Background -->
   <div class="animated-bg"></div>
 
   <!-- Header -->
@@ -96,17 +104,17 @@
       <h3 class="text-3xl font-bold mb-12">Our Work</h3>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-          <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=400&q=80" alt="Project 1" class="rounded mb-4">
+          <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=300&q=80" alt="Project 1" class="rounded mb-4">
           <h4 class="text-xl font-semibold">E-Commerce Boost</h4>
           <p class="text-gray-600">Revamped design led to a 200% increase in conversion rate.</p>
         </div>
         <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Project 2" class="rounded mb-4">
+          <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?auto=format&fit=crop&w=300&q=80" alt="Project 2" class="rounded mb-4">
           <h4 class="text-xl font-semibold">Local Business SEO</h4>
           <p class="text-gray-600">Improved local search visibility with a new responsive website.</p>
         </div>
         <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-          <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=400&q=80" alt="Project 3" class="rounded mb-4">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=300&q=80" alt="Project 3" class="rounded mb-4">
           <h4 class="text-xl font-semibold">Startup Launch</h4>
           <p class="text-gray-600">Helped a startup go live with a branded landing page and email funnel.</p>
         </div>
@@ -190,13 +198,4 @@
         <a href="#" class="hover:underline">Terms of Service</a>
         <a href="#" class="hover:underline">Contact</a>
       </div>
-      <div class="space-x-4 mt-4 md:mt-0">
-        <a href="#"><img src="/icons/facebook.svg" alt="Facebook" class="inline h-6"></a>
-        <a href="#"><img src="/icons/twitter.svg" alt="Twitter" class="inline h-6"></a>
-        <a href="#"><img src="/icons/linkedin.svg" alt="LinkedIn" class="inline h-6"></a>
-      </div>
-    </div>
-  </footer>
-
-</body>
-</html>
+      <div class
