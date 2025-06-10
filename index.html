@@ -6,8 +6,45 @@
   <title>ThreeSeven - Grow Your Business Online</title>
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
+  <style>
+    .animated-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(-45deg, #3b82f6, #2563eb, #1e40af, #3b82f6);
+      background-size: 400% 400%;
+      animation: gradientShift 30s ease infinite;
+      z-index: -1;
+      filter: brightness(0.9);
+    }
+
+    @keyframes gradientShift {
+      0% {
+        background-position: 0% 50%;
+      }
+      50% {
+        background-position: 100% 50%;
+      }
+      100% {
+        background-position: 0% 50%;
+      }
+    }
+
+    .animate-fade-in {
+      animation: fadeIn 1s ease-out forwards;
+    }
+
+    @keyframes fadeIn {
+      0% { opacity: 0; transform: translateY(20px); }
+      100% { opacity: 1; transform: translateY(0); }
+    }
+  </style>
 </head>
 <body class="text-gray-800">
+
+  <div class="animated-bg"></div>
 
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
@@ -54,43 +91,28 @@
   </section>
 
   <!-- Portfolio Section -->
-<section id="portfolio" class="py-16 bg-gray-50">
-  <div class="max-w-6xl mx-auto px-4 text-center">
-    <h3 class="text-3xl font-bold mb-12">Our Work</h3>
-    <div class="grid md:grid-cols-3 gap-8">
-      <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-        <img src="https://source.unsplash.com/300x200/?website,design" alt="Project 1" class="rounded mb-4 object-cover w-full h-48">
-        <h4 class="text-xl font-semibold">Modern Website Redesign</h4>
-        <p class="text-gray-600">A sleek redesign for a tech startup to improve user engagement.</p>
-      </div>
-      <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-        <img src="https://source.unsplash.com/300x200/?ecommerce,store" alt="Project 2" class="rounded mb-4 object-cover w-full h-48">
-        <h4 class="text-xl font-semibold">E-commerce Platform Launch</h4>
-        <p class="text-gray-600">Built a full-featured online store with seamless checkout experience.</p>
-      </div>
-      <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-        <img src="https://source.unsplash.com/300x200/?seo,marketing" alt="Project 3" class="rounded mb-4 object-cover w-full h-48">
-        <h4 class="text-xl font-semibold">SEO & Marketing Campaign</h4>
-        <p class="text-gray-600">Boosted organic traffic and lead generation for a local business.</p>
-      </div>
-      <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-        <img src="https://source.unsplash.com/300x200/?startup,landingpage" alt="Project 4" class="rounded mb-4 object-cover w-full h-48">
-        <h4 class="text-xl font-semibold">Startup Landing Page</h4>
-        <p class="text-gray-600">Designed a compelling landing page to maximize sign-ups.</p>
-      </div>
-      <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-        <img src="https://source.unsplash.com/300x200/?mobile,app" alt="Project 5" class="rounded mb-4 object-cover w-full h-48">
-        <h4 class="text-xl font-semibold">Mobile App Website</h4>
-        <p class="text-gray-600">Created an engaging site showcasing a mobile app’s features.</p>
-      </div>
-      <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-        <img src="https://source.unsplash.com/300x200/?business,consulting" alt="Project 6" class="rounded mb-4 object-cover w-full h-48">
-        <h4 class="text-xl font-semibold">Consulting Firm Website</h4>
-        <p class="text-gray-600">Developed a professional site to build client trust and inquiries.</p>
+  <section id="portfolio" class="py-16 bg-gray-50">
+    <div class="max-w-6xl mx-auto px-4 text-center">
+      <h3 class="text-3xl font-bold mb-12">Our Work</h3>
+      <div class="grid md:grid-cols-3 gap-8">
+        <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
+          <img src="https://images.unsplash.com/photo-1506765515384-028b60a970df?auto=format&fit=crop&w=400&q=80" alt="Project 1" class="rounded mb-4">
+          <h4 class="text-xl font-semibold">E-Commerce Boost</h4>
+          <p class="text-gray-600">Revamped design led to a 200% increase in conversion rate.</p>
+        </div>
+        <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
+          <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?auto=format&fit=crop&w=400&q=80" alt="Project 2" class="rounded mb-4">
+          <h4 class="text-xl font-semibold">Local Business SEO</h4>
+          <p class="text-gray-600">Improved local search visibility with a new responsive website.</p>
+        </div>
+        <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
+          <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?auto=format&fit=crop&w=400&q=80" alt="Project 3" class="rounded mb-4">
+          <h4 class="text-xl font-semibold">Startup Launch</h4>
+          <p class="text-gray-600">Helped a startup go live with a branded landing page and email funnel.</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
   <!-- Testimonials Section -->
   <section id="testimonials" class="bg-gray-50 py-16">
@@ -175,16 +197,6 @@
       </div>
     </div>
   </footer>
-
-  <style>
-    .animate-fade-in {
-      animation: fadeIn 1s ease-out forwards;
-    }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
-    }
-  </style>
 
 </body>
 </html>
