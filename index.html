@@ -7,7 +7,7 @@
   <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.10.3/cdn.min.js" defer></script>
 </head>
-<body class="text-gray-800">
+<body class="text-gray-800 bg-gradient-to-br from-blue-100 via-blue-300 to-blue-500">
 
   <!-- Header -->
   <header class="bg-white shadow-md sticky top-0 z-50">
@@ -24,14 +24,11 @@
   </header>
 
   <!-- Hero Section -->
-  <section class="relative bg-gray-100 py-20 text-center overflow-hidden" x-data="{ show: false }" x-init="setTimeout(() => show = true, 200)" x-show="show" x-transition>
-    <!-- Blue cascading animated gradient background -->
-    <div class="absolute inset-0 -z-10 bg-gradient-to-r from-blue-500 via-blue-700 to-blue-900 bg-[length:400%_400%] animate-gradientShift"></div>
-
-    <div class="max-w-3xl mx-auto px-4 relative z-10">
-      <h2 class="text-4xl font-extrabold mb-4 text-white">Build Stunning Websites That Drive Traffic & Sales</h2>
-      <p class="text-lg text-blue-200 mb-8">At ThreeSeven, we help businesses turn ideas into high-converting websites that grow revenue.</p>
-      <a href="#signup" class="bg-white text-blue-800 px-8 py-3 rounded-full text-lg hover:bg-blue-100 transition transform hover:scale-105">Start Growing Today</a>
+  <section class="bg-gray-100 py-20 text-center" x-data="{ show: false }" x-init="setTimeout(() => show = true, 200)" x-show="show" x-transition>
+    <div class="max-w-3xl mx-auto px-4">
+      <h2 class="text-4xl font-extrabold mb-4">Build Stunning Websites That Drive Traffic & Sales</h2>
+      <p class="text-lg text-gray-600 mb-8">At ThreeSeven, we help businesses turn ideas into high-converting websites that grow revenue.</p>
+      <a href="#signup" class="bg-indigo-600 text-white px-8 py-3 rounded-full text-lg hover:bg-indigo-700 transition transform hover:scale-105">Start Growing Today</a>
     </div>
   </section>
 
@@ -62,19 +59,34 @@
       <h3 class="text-3xl font-bold mb-12">Our Work</h3>
       <div class="grid md:grid-cols-3 gap-8">
         <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-          <img src="https://via.placeholder.com/300x200" alt="Project 1" class="rounded mb-4">
-          <h4 class="text-xl font-semibold">E-Commerce Boost</h4>
-          <p class="text-gray-600">Revamped design led to a 200% increase in conversion rate.</p>
+          <img src="https://source.unsplash.com/300x200/?website,design" alt="Project 1" class="rounded mb-4 object-cover w-full h-48">
+          <h4 class="text-xl font-semibold">Modern Website Redesign</h4>
+          <p class="text-gray-600">A sleek redesign for a tech startup to improve user engagement.</p>
         </div>
         <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-          <img src="https://via.placeholder.com/300x200" alt="Project 2" class="rounded mb-4">
-          <h4 class="text-xl font-semibold">Local Business SEO</h4>
-          <p class="text-gray-600">Improved local search visibility with a new responsive website.</p>
+          <img src="https://source.unsplash.com/300x200/?ecommerce,store" alt="Project 2" class="rounded mb-4 object-cover w-full h-48">
+          <h4 class="text-xl font-semibold">E-commerce Platform Launch</h4>
+          <p class="text-gray-600">Built a full-featured online store with seamless checkout experience.</p>
         </div>
         <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
-          <img src="https://via.placeholder.com/300x200" alt="Project 3" class="rounded mb-4">
-          <h4 class="text-xl font-semibold">Startup Launch</h4>
-          <p class="text-gray-600">Helped a startup go live with a branded landing page and email funnel.</p>
+          <img src="https://source.unsplash.com/300x200/?seo,marketing" alt="Project 3" class="rounded mb-4 object-cover w-full h-48">
+          <h4 class="text-xl font-semibold">SEO & Marketing Campaign</h4>
+          <p class="text-gray-600">Boosted organic traffic and lead generation for a local business.</p>
+        </div>
+        <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
+          <img src="https://source.unsplash.com/300x200/?startup,landingpage" alt="Project 4" class="rounded mb-4 object-cover w-full h-48">
+          <h4 class="text-xl font-semibold">Startup Landing Page</h4>
+          <p class="text-gray-600">Designed a compelling landing page to maximize sign-ups.</p>
+        </div>
+        <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
+          <img src="https://source.unsplash.com/300x200/?mobile,app" alt="Project 5" class="rounded mb-4 object-cover w-full h-48">
+          <h4 class="text-xl font-semibold">Mobile App Website</h4>
+          <p class="text-gray-600">Created an engaging site showcasing a mobile app’s features.</p>
+        </div>
+        <div class="bg-white p-4 shadow-md rounded-lg transform hover:scale-105 transition">
+          <img src="https://source.unsplash.com/300x200/?business,consulting" alt="Project 6" class="rounded mb-4 object-cover w-full h-48">
+          <h4 class="text-xl font-semibold">Consulting Firm Website</h4>
+          <p class="text-gray-600">Developed a professional site to build client trust and inquiries.</p>
         </div>
       </div>
     </div>
@@ -172,23 +184,7 @@
       0% { opacity: 0; transform: translateY(20px); }
       100% { opacity: 1; transform: translateY(0); }
     }
-
-    @keyframes gradientShift {
-      0% {
-        background-position: 0% 50%;
-      }
-      50% {
-        background-position: 100% 50%;
-      }
-      100% {
-        background-position: 0% 50%;
-      }
-    }
-
-    .animate-gradientShift {
-      animation: gradientShift 20s ease infinite;
-      background-size: 400% 400%;
-    }
   </style>
 
-</body
+</body>
+</html>
